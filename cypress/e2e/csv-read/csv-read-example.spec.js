@@ -10,6 +10,5 @@ describe('csv',()=>{
     })
     it('csv read',()=>{
         table.forEach(data=>cy.log(data.name))
-    cy.log(table[0].email)
     })
 })
