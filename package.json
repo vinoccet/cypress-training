@@ -21,6 +21,7 @@
     "cypress-cucumber-preprocessor": "^4.3.1",
     "cypress-downloadfile": "^1.2.4",
     "cypress-mochawesome-reporter": "^3.8.2",
+    "neat-csv": "^5.1.0",
     "wick-a11y": "^1.2.2"
   },
   "cypress-cucumber-preprocessor": {
