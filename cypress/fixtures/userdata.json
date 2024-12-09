@@ -1,0 +1,18 @@
+{
+  "username": "cy_training_b1",
+  "email": "cypressautomation-bathc1@automation.com",
+  "password": "cy",
+  "firstName": "Cy",
+  "lastName": "javascript",
+  "company": "Test",
+  "address": "NewYork, USA",
+  "country": "United States",
+  "state": "NewYork",
+  "city": "NewYork",
+  "zip": "10001",
+  "mobile": "9187262711",
+  "cardNumber": "3798 4655 2055 377",
+  "cvc": "940",
+  "expMonth": "02",
+  "expYear": "2030"
+}

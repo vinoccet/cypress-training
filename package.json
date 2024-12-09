@@ -1,0 +1,30 @@
+{
+  "name": "cypress-training",
+  "version": "1.0.0",
+  "description": "cypress training",
+  "main": "day1_basics.js",
+  "scripts": {
+    "cy_open": "npx cypress open",
+    "cy_run": "npx cypress run",
+    "cy_run_testautomation_signup": "npx cypress run --spec 'cypress/e2e/test-automation/signup.spec.js'",
+    "dev": "npx cypress run --spec 'cypress/e2e/session/*.spec.js' --config-file cypress.dev.config.js",
+    "int": "npx cypress run --spec ['cypress/e2e/session/*.spec.js','cypress/e2e/download/*.spec.js'] --config-file cypress.int.config.js",
+    "accessability": "npx cypress open --config-file cypress.int.config.js"
+  },
+  "keywords": [
+    "cypress"
+  ],
+  "author": "vinoth",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.15.2",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-downloadfile": "^1.2.4",
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "wick-a11y": "^1.2.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "step_definitions": "cypress/e2e/test-automation/tests"
+  }
+}

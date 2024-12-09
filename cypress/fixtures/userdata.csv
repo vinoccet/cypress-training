@@ -1,0 +1,2 @@
+name,email,comments
+"Using fixtures to represent data	",hello@cypress.io,Fixtures are a great way to mock data for responses to routes
