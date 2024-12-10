@@ -10,5 +10,8 @@ describe('csv',()=>{
     })
     it('csv read',()=>{
         table.forEach(data=>cy.log(data.name))
+
+        table.forEach(data=>cy.log(data.name))
+
     })
 })
