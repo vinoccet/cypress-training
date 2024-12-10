@@ -1,0 +1,130 @@
+ Variables and Data Types (String, Number, Boolean, Object, etc.)
+ Loops and Conditionals
+ Functions and Arrow Functions
+ ES6 Concepts (Promises, Async/Await)
+ Callback Functions
+ Error Handling (try/catch)
+ Module Import/Export
+
+
+Javascript
+NPM and Yarn = Maven java
+npm init
+
+Steps:
+Enrolled for training
+Training started
+make sure following prerequisite (computer and internet) is present for javascript and cypress training
+install node and vscode
+learn and practice javascript
+install cypress
+learn and practice cypress
+Training completed
+
+Not enrolled 
+Thankyou
+
+
+steps:
+install nodejs, vscode
+create a folder and give npm init, package.json will be created
+install cypress npm install --save-dev
+npx cypress open
+
+git clone https://github.com/cypress-io/cypress-realworld-testing-course-app
+npm install
+
+npm install yarn@latest -g
+yarn
+https://learn.cypress.io/real-world-examples/cypress-real-world-app-overview
+
+practice site:
+https://automationexercise.com/
+
+Errors:
+open powershell:
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
+Set-ExecutionPolicy RemoteSigned
+
+cucumber:
+npm i cypress-cucumber-preprocessor --save-dev
+
+-- config.json ---
+const { defineConfig } = require('cypress')
+const cucumber = require("cypress-cucumber-preprocessor").default;
+
+module.exports = defineConfig({
+  e2e: {
+    setupNodeEvents(on, config) {
+      // implement node event listeners here
+      on("file:preprocessor", cucumber());
+      config.specPattern = [
+        'cypress/e2e/test-automation/tests/*.feature'
+      ]
+      return config;
+    } 
+  },
+})
+
+-- package.json --
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "step_definitions": "cypress/e2e/test-automation/tests"
+  }
+
+
+--- Upload----
+inbuild cypress command
+Example usage:
+cy.visit('https://the-internet.herokuapp.com/upload')
+cy.get('#file-upload').selectFile('cypress/fixtures/example.json')
+
+--download ----
+npm install cypress-downloadfile --save-dev
+commands.js -> require('cypress-downloadfile/lib/downloadFileCommand')
+
+config.js -> const {downloadFile} = require('cypress-downloadfile/lib/addPlugin')
+    setupNodeEvents(on, config) {
+      // implement node event listeners here
+      on('task', {downloadFile})
+      return config;
+    } 
+example: cy.downloadFile('https://the-internet.herokuapp.com/download/manoj.m.docx','cypress/fixtures/mydownloads','manojm.docx')
+--working with new tabs----
+Example usage:
+        cy.visit('https://the-internet.herokuapp.com/windows')
+        cy.get('[href="/windows/new"]').invoke('removeAttr', 'target').click()
+
+
+--- handling multiple configs ---
+ 2 ways
+1) using multiple configs
+
+---accessability testing---
+npm install wick-a11y --save-dev
+add below in config.js:
+const addAccessibilityTasks = require("wick-a11y/accessibility-tasks");
+addAccessibilityTasks(on);
+add below in e2e.js
+require('wick-a11y');
+
+---csv---
+npm install neat-csv@v5.1.0 --save-dev
+/// <reference types="cypress" />
+const neatCSV = require('neat-csv')	
+
+github actions:
+https://github.com/cypress-io/github-action
+
+git commands:
+git init
+git add filename or git add .
+git commit -m 'message'
+git remote add origin "url"
+git push origin <branchname>
+git branch -> to list branch
+git branch -D branchname  -> delete branch
+git push origin --delete <branchname>
+git branch <branchname>
+git checkout <branchname>
+git status
